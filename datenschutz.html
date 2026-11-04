@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="de-AT">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Datenschutz | Tischlerei Gruber Niederwölz</title>
+<meta name="description" content="Datenschutzerklärung der Tischlerei Gruber GmbH, Niederwölz.">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="stil.css">
+</head>
+<body>
+<a class="skip" href="#inhalt">Zum Inhalt springen</a>
+<div class="entwurf">Entwurf von Werner Hansmann – unverbindlicher&nbsp;Vorschlag</div>
+<header class="kopfzeile">
+ <div class="wrap kopf">
+  <a class="logo" href="index.html" aria-label="Tischlerei Gruber – zur Startseite"><img src="assets/logo.png" alt="Logo Tischlerei Gruber, seit 1914" width="64" height="64"></a>
+  <button class="menueknopf" type="button" aria-expanded="false" aria-controls="hauptmenue">Menü</button>
+  <nav class="hauptmenue" id="hauptmenue" aria-label="Hauptmenü"><ul>
+   <li><a href="leistungen.html">Leistungen</a></li><li><a href="projekte.html">Projekte</a></li><li><a href="ueber-uns.html">Über uns &amp; Team</a></li><li><a href="karriere.html">Karriere</a></li><li><a href="kontakt.html">Kontakt</a></li>
+  </ul></nav>
+  <a class="anruf" href="tel:+4335822267" aria-label="Anrufen: 03582 22 67">03582 22 67</a>
+ </div>
+</header>
+<main id="inhalt">
+<section class="seitenkopf"><div class="wrap" style="max-width:860px">
+ <h1>Datenschutzerklärung</h1>
+ <p class="ph">[Platzhalter: Die bestehende Datenschutzerklärung der Firma wird übernommen und angepasst.]</p>
+ <p class="ph" style="margin-top:16px">[Hinweis für Werner, nicht für Besucher: Diese Seite verwendet keine Cookies, keine Tracker, keine eingebettete Google-Karte und keine Schriften von Google-Servern. Ein Cookie-Banner ist dadurch nicht nötig, solange keine solchen Dienste dazukommen.]</p>
+</div></section>
+</main>
+<footer class="fuss">
+ <div class="wrap">
+  <div class="fuss-raster">
+   <img src="assets/logo.png" alt="" width="76" height="76" loading="lazy">
+   <div>
+    <h2>Tischlerei Gruber GmbH</h2>
+    <address>Gruberweg 41<br>8831 Niederwölz<br>Steiermark, Bezirk Murau</address>
+   </div>
+   <div>
+    <h2>Kontakt</h2>
+    <ul><li><a href="tel:+4335822267">03582 22 67</a></li><li><a href="mailto:office@tischlereigruber.at">office@tischlereigruber.at</a></li><li><a href="https://www.google.com/maps/search/?api=1&query=Gruberweg+41%2C+8831+Niederw%C3%B6lz" rel="noopener">Route in Google Maps</a></li></ul>
+   </div>
+   <div>
+    <h2>Seiten</h2>
+    <ul><li><a href="leistungen.html">Leistungen</a></li><li><a href="projekte.html">Projekte</a></li><li><a href="ueber-uns.html">Über uns &amp; Team</a></li><li><a href="karriere.html">Karriere</a></li><li><a href="kontakt.html">Kontakt</a></li></ul>
+   </div>
+  </div>
+  <div class="fuss-unten"><span>© Tischlerei Gruber GmbH · seit 1914</span><span><a href="impressum.html">Impressum</a> · <a href="datenschutz.html">Datenschutz</a></span></div>
+ </div>
+</footer>
+<div class="daumen"><a class="btn btn-voll" href="tel:+4335822267">Anrufen</a><a class="btn btn-rand" href="kontakt.html#anfrage">Anfrage</a></div>
+<script>
+(function(){
+ var k=document.querySelector('.menueknopf'),m=document.getElementById('hauptmenue');
+ if(k&&m){k.addEventListener('click',function(){var o=m.classList.toggle('offen');k.setAttribute('aria-expanded',o);k.textContent=o?'Schließen':'Menü';});
+  m.addEventListener('focusout',function(e){if(m.classList.contains('offen')&&!m.contains(e.relatedTarget)&&e.relatedTarget!==k){m.classList.remove('offen');k.setAttribute('aria-expanded','false');k.textContent='Menü';}});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&m.classList.contains('offen')){m.classList.remove('offen');k.setAttribute('aria-expanded','false');k.textContent='Menü';k.focus();}});}
+ document.querySelectorAll('[data-stelle]').forEach(function(a){a.addEventListener('click',function(){var s=document.querySelector('select[name=stelle]');if(s)s.value=a.getAttribute('data-stelle');});});
+ document.querySelectorAll('form.attrappe').forEach(function(f){f.addEventListener('submit',function(e){e.preventDefault();var h=f.querySelector('.formmeldung');if(h){h.classList.add('sichtbar');h.focus();}});});
+})();
+</script>
+</body>
+</html>
