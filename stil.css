@@ -22,7 +22,7 @@ a,button{-webkit-tap-highlight-color:transparent;touch-action:manipulation}
 .wrap{max-width:1240px;margin:0 auto;padding:0 32px}
 
 /* Entwurfs-Hinweis */
-.entwurf{background:var(--text);color:#fff;font-size:15px;text-align:center;padding:6px 12px}
+.entwurf{background:#e2b400;color:#1a1f1c;font-size:14px;font-weight:700;line-height:1.35;text-align:center;padding:5px 12px}
 
 /* Kopf */
 header.kopfzeile{border-bottom:1px solid var(--linie);background:#fff;position:sticky;top:0;z-index:30}
@@ -49,7 +49,7 @@ h3{font-size:24px;line-height:1.25;margin-bottom:8px}
 .kicker{font-size:16px;letter-spacing:.08em;text-transform:uppercase;color:var(--gruen);font-weight:700;margin-bottom:16px}
 .lead{font-size:21px;color:var(--grau);max-width:34em;margin-bottom:34px}
 .unter{color:var(--grau);max-width:40em;margin-bottom:40px}
-section{scroll-margin-top:100px}
+section{scroll-margin-top:130px}
 .abschnitt{padding:88px 0}
 .abschnitt.papier{background:var(--papier)}
 
@@ -158,7 +158,7 @@ form.attrappe textarea{min-height:140px;resize:vertical}
 /* Projekte-Seite */
 .sprungliste{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:10px;margin-bottom:48px}
 .sprungliste a{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border:0;border-radius:3px;background:#fff;text-decoration:none;color:var(--text);font-size:16px}
-.projektblock{display:grid;grid-template-columns:1fr 1.6fr;gap:56px;align-items:start;padding:64px 0;scroll-margin-top:100px}
+.projektblock{display:grid;grid-template-columns:1fr 1.6fr;gap:56px;align-items:start;padding:64px 0;scroll-margin-top:130px}
 .projektblock:first-of-type{border-top:0;padding-top:0}
 .projektblock.gespiegelt{grid-template-columns:1.6fr 1fr}
 .projektblock.gespiegelt .projekt-text{order:2}
@@ -315,3 +315,4 @@ footer.fuss{background:#2b2b2a;color:#e9e7e3;padding:64px 0 32px;margin-top:0}
   .hauptmenue{transform:none!important}
   .lightbox[open]{animation:none}.lightbox img{transform:none}
 }
+@media (max-width:360px){.entwurf{font-size:13px;padding:4px 8px}}
