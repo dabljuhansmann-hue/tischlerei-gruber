@@ -160,6 +160,8 @@ form.attrappe textarea{min-height:140px;resize:vertical}
 .sprungliste a{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border:0;border-radius:3px;background:#fff;text-decoration:none;color:var(--text);font-size:16px}
 .projektblock{display:grid;grid-template-columns:1fr 1.6fr;gap:56px;align-items:start;padding:64px 0;scroll-margin-top:100px}
 .projektblock:first-of-type{border-top:0;padding-top:0}
+.projektblock.gespiegelt{grid-template-columns:1.6fr 1fr}
+.projektblock.gespiegelt .projekt-text{order:2}
 .projekt-text h2{margin-bottom:12px}
 .projekt-text p{color:var(--grau);margin-bottom:12px}
 .projekt-text p.kicker{color:var(--gruen)}
@@ -182,7 +184,7 @@ form.attrappe textarea{min-height:140px;resize:vertical}
 .ref-karten .fraese{margin-bottom:16px}
 .schritte .fraese{margin-bottom:18px}
 .projekt-thumbs .fraese{border-radius:6px}
-.logo-kachel .fraese{background:#fff;aspect-ratio:1/1;display:flex;align-items:center;justify-content:center}
+.logo-kachel .fraese{background:transparent;aspect-ratio:1/1;display:flex;align-items:center;justify-content:center}
 .logo-kachel .fraese img{width:58%!important;aspect-ratio:1/1;height:auto}
 .karte{background:var(--hell);border:0;border-radius:var(--rund);box-shadow:none}
 /* Mosaik Projekte */
@@ -246,7 +248,8 @@ footer.fuss{background:#2b2b2a;color:#e9e7e3;padding:64px 0 32px;margin-top:0}
   .namen{grid-template-columns:1fr 1fr}
   .ref-karten{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 14px}
   .ref-karten h3{font-size:18px}
-  .projektblock{grid-template-columns:1fr;gap:24px}
+  .projektblock,.projektblock.gespiegelt{grid-template-columns:1fr;gap:24px}
+  .projektblock.gespiegelt .projekt-text{order:0}
   .schritte{grid-template-columns:1fr 1fr}
   .fuss-raster{grid-template-columns:1fr 1fr}
 }
