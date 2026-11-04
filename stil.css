@@ -31,11 +31,11 @@ header.kopfzeile{border-bottom:1px solid var(--linie);background:#fff;position:s
 .hauptmenue ul{display:flex;gap:6px;list-style:none;padding:0}
 .hauptmenue a{display:block;color:var(--text);text-decoration:none;font-size:17px;padding:10px 12px;border-radius:4px}
 .hauptmenue a[aria-current="page"]{color:var(--gruen);font-weight:700}
-.anruf{margin-left:auto;display:inline-flex;align-items:center;gap:8px;background:var(--gruen);color:#fff;text-decoration:none;font-weight:700;min-height:48px;padding:0 22px;border-radius:999px;font-size:17px;transition:transform 160ms var(--ease-out),background-color 200ms ease}
+.anruf{margin-left:auto;display:inline-flex;align-items:center;gap:8px;background:var(--gruen);color:#fff;text-decoration:none;font-weight:700;min-height:48px;padding:0 22px;border-radius:3px;font-size:17px;transition:transform 160ms var(--ease-out),background-color 200ms ease}
 .menueknopf{display:none}
 
 /* Knöpfe */
-.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 28px;border-radius:999px;font:inherit;font-weight:700;text-decoration:none;font-size:18px;cursor:pointer;border:0;transition:transform 160ms var(--ease-out),background-color 200ms ease,border-color 200ms ease}
+.btn{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 28px;border-radius:3px;font:inherit;font-weight:700;text-decoration:none;font-size:18px;cursor:pointer;border:0;transition:transform 160ms var(--ease-out),background-color 200ms ease,border-color 200ms ease}
 .btn:active,.anruf:active{transform:scale(.97)}
 .btn-voll{background:var(--gruen);color:#fff}
 .btn-rand{border:0;background:#e8e8ed;color:var(--text)}
@@ -106,7 +106,7 @@ section{scroll-margin-top:100px}
 .karriere-band{background:var(--gruen-hell)}
 .karriere-band .kicker{color:var(--gruen-dunkel)}
 .stellen-chips{display:flex;flex-wrap:wrap;gap:10px;list-style:none;padding:0;margin:0 0 28px}
-.stellen-chips li{color:var(--text);border:1px solid #b9d9c6;background:#fff;border-radius:999px;padding:6px 16px;font-size:16px}
+.stellen-chips li{color:var(--text);border:1px solid #b9d9c6;background:#fff;border-radius:3px;padding:6px 16px;font-size:16px}
 
 /* Kontakt-Band */
 .kontakt-raster{display:grid;grid-template-columns:1.1fr 1fr;gap:56px;align-items:start}
@@ -157,7 +157,7 @@ form.attrappe textarea{min-height:140px;resize:vertical}
 
 /* Projekte-Seite */
 .sprungliste{list-style:none;padding:0;display:flex;flex-wrap:wrap;gap:10px;margin-bottom:48px}
-.sprungliste a{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border:0;border-radius:999px;background:#fff;text-decoration:none;color:var(--text);font-size:16px}
+.sprungliste a{display:inline-flex;align-items:center;min-height:44px;padding:0 18px;border:0;border-radius:3px;background:#fff;text-decoration:none;color:var(--text);font-size:16px}
 .projektblock{display:grid;grid-template-columns:1fr 1.6fr;gap:56px;align-items:start;padding:64px 0;scroll-margin-top:100px}
 .projektblock:first-of-type{border-top:0;padding-top:0}
 .projekt-text h2{margin-bottom:12px}
@@ -172,16 +172,18 @@ form.attrappe textarea{min-height:140px;resize:vertical}
 
 
 /* ===== Clean: helle Flächen, große Rundungen, keine Rahmen/Schatten ===== */
-:root{--hell:#f5f5f7;--rund:20px}
+:root{--hell:#f5f5f7;--rund:6px}
 .fraese{display:block;position:relative;border-radius:var(--rund);overflow:hidden;background:var(--hell);isolation:isolate}
-.fraese img{display:block;width:100%;border-radius:0;margin:0!important;transition:transform 600ms var(--ease-out)}
-.hero-bild .fraese{border-radius:28px}
-.weg{background:#fff;border:0;border-radius:28px;box-shadow:none;padding:0;overflow:hidden}
+.fraese img{display:block;width:100%;border-radius:0;margin:0!important;transition:transform 600ms var(--ease-out),filter 450ms ease}
+.hero-bild .fraese{border-radius:6px}
+.weg{background:#fff;border:0;border-radius:6px;box-shadow:none;padding:0;overflow:hidden}
 .weg .fraese{border-radius:0}
 .weg div{padding:30px 32px 34px}
 .ref-karten .fraese{margin-bottom:16px}
 .schritte .fraese{margin-bottom:18px}
-.projekt-thumbs .fraese{border-radius:14px}
+.projekt-thumbs .fraese{border-radius:6px}
+.logo-kachel .fraese{background:#fff;aspect-ratio:1/1;display:flex;align-items:center;justify-content:center}
+.logo-kachel .fraese img{width:58%!important;aspect-ratio:1/1;height:auto}
 .karte{background:var(--hell);border:0;border-radius:var(--rund);box-shadow:none}
 /* Mosaik Projekte */
 .mosaik{list-style:none;padding:0;margin:48px 0 0;display:grid;grid-template-columns:repeat(4,1fr);grid-template-rows:repeat(2,290px);gap:22px}
@@ -198,12 +200,12 @@ form.attrappe textarea{min-height:140px;resize:vertical}
 .lightbox::backdrop{background:transparent}
 @keyframes lb-auf{from{opacity:0}to{opacity:1}}
 .lightbox figure{margin:0;max-width:min(1100px,92vw);text-align:center}
-.lightbox img{max-width:100%;max-height:78dvh;width:auto;margin:0 auto;border-radius:18px;box-shadow:none;opacity:0;transform:scale(.985);transition:opacity 220ms var(--ease-out),transform 220ms var(--ease-out)}
+.lightbox img{max-width:100%;max-height:78dvh;width:auto;margin:0 auto;border-radius:6px;box-shadow:none;opacity:0;transform:scale(.985);transition:opacity 220ms var(--ease-out),transform 220ms var(--ease-out)}
 .lightbox img.da{opacity:1;transform:none}
 .lightbox figcaption{margin-top:22px;display:flex;flex-wrap:wrap;gap:6px 16px;justify-content:center;align-items:baseline;font-size:16px;color:var(--grau)}
 .lightbox figcaption b{color:var(--text);font-size:18px}
 .lightbox figcaption em{font-style:normal;color:var(--grau)}
-.lightbox button{position:absolute;border:0;background:#e8e8ed;color:var(--text);font:inherit;cursor:pointer;border-radius:50%;width:56px;height:56px;font-size:30px;line-height:1;display:flex;align-items:center;justify-content:center;transition:background-color 200ms ease,transform 160ms var(--ease-out)}
+.lightbox button{position:absolute;border:0;background:#e8e8ed;color:var(--text);font:inherit;cursor:pointer;border-radius:3px;width:56px;height:56px;font-size:30px;line-height:1;display:flex;align-items:center;justify-content:center;transition:background-color 200ms ease,transform 160ms var(--ease-out)}
 .lightbox button:active{transform:scale(.94)}
 .lightbox button:focus-visible{outline:3px solid var(--gruen);outline-offset:3px}
 .lb-zu{top:18px;right:18px;font-size:22px!important}
@@ -230,7 +232,8 @@ footer.fuss{background:#2b2b2a;color:#e9e7e3;padding:64px 0 32px;margin-top:0}
 .daumen{display:none}
 
 @media (hover:hover) and (pointer:fine){
-  a:hover .fraese img,a.fraese:hover img{transform:scale(1.03)}
+  a:hover .fraese img,a.fraese:hover img{transform:scale(1.03);filter:brightness(1.05) contrast(1.07) saturate(1.18)}
+  .logo-kachel .fraese img{filter:none!important;transform:none!important}
   .lightbox button:hover{background:#dcdce1}
   .sprungliste a:hover{border-color:var(--gruen);color:var(--gruen)}
   .hauptmenue a:hover{color:var(--gruen);background:var(--papier)}
@@ -254,7 +257,7 @@ footer.fuss{background:#2b2b2a;color:#e9e7e3;padding:64px 0 32px;margin-top:0}
   .kopf{height:68px;gap:12px}
   .kopf .logo img{width:52px;height:52px}
   .anruf{display:none}
-  .menueknopf{display:inline-flex;align-items:center;gap:8px;margin-left:auto;min-height:48px;padding:0 16px;border:0;border-radius:999px;background:#e8e8ed;font:inherit;font-weight:700;font-size:17px;color:var(--text);cursor:pointer;transition:transform 160ms var(--ease-out)}
+  .menueknopf{display:inline-flex;align-items:center;gap:8px;margin-left:auto;min-height:48px;padding:0 16px;border:0;border-radius:3px;background:#e8e8ed;font:inherit;font-weight:700;font-size:17px;color:var(--text);cursor:pointer;transition:transform 160ms var(--ease-out)}
   .menueknopf:active{transform:scale(.97)}
   .hauptmenue{position:absolute;left:0;right:0;top:100%;background:#fff;border-bottom:1px solid var(--linie);box-shadow:0 12px 24px rgba(0,0,0,.08);opacity:0;transform:translateY(-6px);visibility:hidden;transition:opacity 180ms var(--ease-out),transform 180ms var(--ease-out),visibility 0s linear 180ms}
   .hauptmenue.offen{opacity:1;transform:none;visibility:visible;transition:opacity 200ms var(--ease-out),transform 200ms var(--ease-out),visibility 0s}
@@ -276,14 +279,13 @@ footer.fuss{background:#2b2b2a;color:#e9e7e3;padding:64px 0 32px;margin-top:0}
   .stellen li{grid-template-columns:1fr;gap:8px}
   .projektblock{padding:36px 0}
   .mosaik{grid-template-columns:1fr 1fr;grid-template-rows:250px 190px 190px;gap:14px;margin-top:32px}
-  :root{--rund:16px}
-  .hero-bild .fraese,.weg{border-radius:22px}
+  .hero-bild .fraese,.weg{border-radius:6px}
   .weg div{padding:24px 22px 26px}
   .mosaik .m0{grid-column:span 2;grid-row:span 1}
 
   .mosaik-titel{font-size:15px}
   .lb-zurueck,.lb-weiter{top:auto;bottom:18px;margin-top:0}
-  .lightbox img{max-height:58dvh;border-radius:14px}
+  .lightbox img{max-height:58dvh;border-radius:6px}
   .lightbox figure{padding:64px 0 90px}
   .lightbox figcaption{font-size:15px;margin-top:18px}
   .lightbox button{width:48px;height:48px;font-size:26px}
