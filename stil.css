@@ -57,6 +57,12 @@ section{scroll-margin-top:100px}
 .hero{position:relative;overflow:hidden}
 .hero .ringe{position:absolute;width:1100px;height:1100px;left:-430px;top:-330px;pointer-events:none;z-index:0}
 .hero .wrap{position:relative;z-index:1}
+/* Jahresringe wachsen beim ersten Laden: 4 Ringe, dann Ring für Ring nach außen */
+.ringe .wachs,.ringe .riss{transform-box:view-box;transform-origin:550px 550px}
+.ringe .wachs{animation:ring-wachsen 1100ms var(--ease-out) both;animation-delay:calc(500ms + var(--i) * 340ms)}
+.ringe .riss{stroke-dasharray:1;animation:riss-zeichnen 1400ms var(--ease-out) both;animation-delay:calc(500ms + var(--i) * 340ms)}
+@keyframes ring-wachsen{from{opacity:0;transform:scale(var(--s))}to{opacity:1;transform:none}}
+@keyframes riss-zeichnen{from{stroke-dashoffset:1}to{stroke-dashoffset:0}}
 .hero-raster{display:grid;grid-template-columns:1.05fr 1fr;gap:56px;align-items:center;padding-top:72px;padding-bottom:80px}
 .hero-bild img{width:100%;aspect-ratio:4/3.4;object-fit:cover;border-radius:2px}
 .hero-bild figcaption,.bild figcaption{font-size:15px;color:var(--grau);margin-top:10px}
@@ -191,7 +197,7 @@ footer.fuss{background:#2b2b2a;color:#e9e7e3;padding:64px 0 32px;margin-top:0}
 
 @media (max-width:980px){
   .namen{grid-template-columns:1fr 1fr}
-  .ref-karten{grid-template-columns:1fr 1fr;gap:20px 14px}
+  .ref-karten{grid-template-columns:repeat(2,minmax(0,1fr));gap:20px 14px}
   .ref-karten h3{font-size:18px}
   .projektblock{grid-template-columns:1fr;gap:24px}
   .schritte{grid-template-columns:1fr 1fr}
@@ -241,6 +247,7 @@ footer.fuss{background:#2b2b2a;color:#e9e7e3;padding:64px 0 32px;margin-top:0}
 }
 @media (prefers-reduced-motion:reduce){
   html{scroll-behavior:auto}
+  .ringe .wachs,.ringe .riss{animation:none}
   *{transition-property:opacity,background-color,border-color!important}
   .btn:active,.anruf:active,.menueknopf:active{transform:none}
   .hauptmenue{transform:none!important}
