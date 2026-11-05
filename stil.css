@@ -316,3 +316,17 @@ footer.fuss{background:#2b2b2a;color:#e9e7e3;padding:64px 0 32px;margin-top:0}
   .lightbox[open]{animation:none}.lightbox img{transform:none}
 }
 @media (max-width:360px){.entwurf{font-size:13px;padding:4px 8px}}
+
+/* Wege: große Bildkacheln mit Schrift im Foto (wie REIF) */
+.weg{position:relative;display:block;overflow:hidden;border:0;border-radius:6px;background:#1d1d1f;padding:0;height:clamp(440px,48vw,620px);color:#fff;text-decoration:none;-webkit-tap-highlight-color:transparent;touch-action:manipulation;transition:transform 160ms var(--ease-out)}
+.weg:active{transform:scale(.985)}
+.weg .fraese{position:absolute;inset:0;border-radius:0;display:block;height:100%}
+.weg img{position:absolute;inset:0;width:100%;height:100%;aspect-ratio:auto;object-fit:cover}
+.weg .weg-text{position:absolute;left:0;right:0;bottom:0;display:block;padding:120px 36px 34px;background:linear-gradient(rgba(20,20,22,0),rgba(20,20,22,.55) 45%,rgba(20,20,22,.85))}
+.weg h3{color:#fff;font-size:clamp(32px,3.6vw,48px);line-height:1.05;letter-spacing:-.02em;margin:0 0 12px}
+.weg .weg-link{display:inline-flex;align-items:center;gap:8px;font-weight:700;font-size:18px;color:#fff;border-bottom:2px solid #6fd39b;padding-bottom:3px}
+.weg .weg-link::after{content:"→";transition:transform 200ms var(--ease-out)}
+@media (hover:hover) and (pointer:fine){.weg:hover .weg-link::after{transform:translateX(4px)}}
+@media (max-width:760px){.weg{height:auto;aspect-ratio:4/5}.weg .weg-text{padding:90px 22px 24px}.weg h3{font-size:32px}.weg .weg-link{font-size:17px}}
+@media (prefers-reduced-motion:reduce){.weg,.weg .weg-link::after{transition:none}.weg:active{transform:none}}
+@media (max-width:360px){.weg .weg-link{display:inline;font-size:16px}}
